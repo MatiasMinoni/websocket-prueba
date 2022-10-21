@@ -1,18 +1,29 @@
 
-<form action="/products" method="post">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Producto</label>
-        <input type="text" class="form-control" name="product" id="product" placeholder="Producto">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Precio</label>
-        <input type="number" class="form-control"name="price" id="price" placeholder="Precio">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Foto</label>
-        <input type="file" class="form-control"name="photo" id="photo" placeholder="Foto">
-      </div>
-      <input type="hidden" name="id" id="id">
+    <div class="row">
+      <form action="/products" method="post" class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="product" id="product" placeholder="Producto" type="text" class="validate">
+            <label for="product"></label>
+          </div>
+          <div class="input-field col s6">
+            <input name="price" id="price" type="number" placeholder="Precio" class="validate">
+            <label for="price"></label>
+          </div>
+        </div>
+        <div class="file-field input-field">
+          <div class="waves-effect blue lighten-1 btn boton">
+            <span>File</span>
+            <input type="file"  name="photo" id="photo" placeholder="Foto">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" placeholder="Insertar imagen" type="text">
+          </div>
+        </div>
+        <input type="hidden" name="id" id="id">
   
-    <button>Enviar</button>
-    </form>
+        <button class="waves-effect blue lighten-1 btn boton">Enviar</button>
+
+      </form>
+    </div>
+        
